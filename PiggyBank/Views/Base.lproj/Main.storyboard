@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Piggy Bank-->
+        <!--Title View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TitleViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +50,9 @@
                                                 <rect key="frame" x="114.33333333333333" y="120" width="164.33333333333337" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Use Without Login"/>
+                                                <connections>
+                                                    <segue destination="xb5-fw-C5u" kind="show" id="1xe-we-tOa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -81,7 +85,7 @@
                             <constraint firstItem="rQY-6v-t5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dSA-oO-qbg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Piggy Bank" id="tZI-dI-rZ3"/>
+                    <navigationItem key="navigationItem" id="tZI-dI-rZ3"/>
                     <connections>
                         <outlet property="titleLabel" destination="8qw-UC-N8x" id="LKN-JE-Tu2"/>
                     </connections>
@@ -95,6 +99,59 @@
                 </button>
             </objects>
             <point key="canvasLocation" x="1054.1984732824426" y="-27.464788732394368"/>
+        </scene>
+        <!--PiggyBank-->
+        <scene sceneID="6Cb-Pl-cT2">
+            <objects>
+                <viewController id="xb5-fw-C5u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ne7-st-Wry">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-hy-itK">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ssd-5e-NLo">
+                                <rect key="frame" x="50" y="153" width="293" height="615"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="22k-YJ-8Ri">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ECj-yo-CL8">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cwM-ba-Oag">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FS0-Ww-6x4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B9d-hy-itK" firstAttribute="leading" secondItem="FS0-Ww-6x4" secondAttribute="leading" id="83A-7d-OGK"/>
+                            <constraint firstItem="Ssd-5e-NLo" firstAttribute="top" secondItem="FS0-Ww-6x4" secondAttribute="top" constant="50" id="JPo-KX-Yzl"/>
+                            <constraint firstItem="B9d-hy-itK" firstAttribute="top" secondItem="ne7-st-Wry" secondAttribute="top" id="Klz-eI-WSm"/>
+                            <constraint firstItem="Ssd-5e-NLo" firstAttribute="leading" secondItem="FS0-Ww-6x4" secondAttribute="leading" constant="50" id="MBh-xG-TsB"/>
+                            <constraint firstAttribute="bottom" secondItem="B9d-hy-itK" secondAttribute="bottom" id="PL8-vI-BPp"/>
+                            <constraint firstItem="FS0-Ww-6x4" firstAttribute="bottom" secondItem="Ssd-5e-NLo" secondAttribute="bottom" constant="50" id="RJT-n4-dfV"/>
+                            <constraint firstItem="FS0-Ww-6x4" firstAttribute="trailing" secondItem="B9d-hy-itK" secondAttribute="trailing" id="nqC-55-FIf"/>
+                            <constraint firstItem="FS0-Ww-6x4" firstAttribute="trailing" secondItem="Ssd-5e-NLo" secondAttribute="trailing" constant="50" id="v1C-Mi-aM2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PiggyBank" id="4Na-Ay-Uxv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AMm-Ni-zSy"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncA-uW-McK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910.6870229007632" y="-27.464788732394368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dvg-rj-iyK">

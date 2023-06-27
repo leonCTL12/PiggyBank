@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA22A4AD137004B7882 /* AppDelegate.swift */; };
 		7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA42A4AD137004B7882 /* SceneDelegate.swift */; };
-		7345FFA72A4AD137004B7882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA62A4AD137004B7882 /* ViewController.swift */; };
+		7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA62A4AD137004B7882 /* TitleViewController.swift */; };
 		7345FFAA2A4AD137004B7882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7345FFA82A4AD137004B7882 /* Main.storyboard */; };
 		7345FFAC2A4AD138004B7882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7345FFAB2A4AD138004B7882 /* Assets.xcassets */; };
 		7345FFAF2A4AD138004B7882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7345FFAD2A4AD138004B7882 /* LaunchScreen.storyboard */; };
 		7345FFBA2A4AD138004B7882 /* PiggyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFB92A4AD138004B7882 /* PiggyBankTests.swift */; };
 		7345FFC42A4AD138004B7882 /* PiggyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */; };
 		7345FFC62A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */; };
+		73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */; };
+		73AE6AC62A4AE7A300C448FF /* PiggyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		7345FF9F2A4AD137004B7882 /* PiggyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFA22A4AD137004B7882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7345FFA42A4AD137004B7882 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7345FFA62A4AD137004B7882 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7345FFA62A4AD137004B7882 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		7345FFA92A4AD137004B7882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7345FFAB2A4AD138004B7882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7345FFAE2A4AD138004B7882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		7345FFBF2A4AD138004B7882 /* PiggyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiggyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITests.swift; sourceTree = "<group>"; };
 		7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyCell.swift; sourceTree = "<group>"; };
+		73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PiggyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,11 @@
 		7345FFA12A4AD137004B7882 /* PiggyBank */ = {
 			isa = PBXGroup;
 			children = (
+				73AE6AC22A4AE74E00C448FF /* Controllers */,
+				73AE6AC12A4AE72C00C448FF /* Views */,
 				7345FFA22A4AD137004B7882 /* AppDelegate.swift */,
 				7345FFA42A4AD137004B7882 /* SceneDelegate.swift */,
-				7345FFA62A4AD137004B7882 /* ViewController.swift */,
-				7345FFA82A4AD137004B7882 /* Main.storyboard */,
 				7345FFAB2A4AD138004B7882 /* Assets.xcassets */,
-				7345FFAD2A4AD138004B7882 /* LaunchScreen.storyboard */,
 				7345FFB02A4AD138004B7882 /* Info.plist */,
 			);
 			path = PiggyBank;
@@ -125,6 +128,25 @@
 				7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */,
 			);
 			path = PiggyBankUITests;
+			sourceTree = "<group>";
+		};
+		73AE6AC12A4AE72C00C448FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7345FFA82A4AD137004B7882 /* Main.storyboard */,
+				73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */,
+				73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */,
+				7345FFAD2A4AD138004B7882 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73AE6AC22A4AE74E00C448FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7345FFA62A4AD137004B7882 /* TitleViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +255,7 @@
 			files = (
 				7345FFAF2A4AD138004B7882 /* LaunchScreen.storyboard in Resources */,
 				7345FFAC2A4AD138004B7882 /* Assets.xcassets in Resources */,
+				73AE6AC62A4AE7A300C448FF /* PiggyCell.xib in Resources */,
 				7345FFAA2A4AD137004B7882 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7345FFA72A4AD137004B7882 /* ViewController.swift in Sources */,
+				7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */,
 				7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */,
+				73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */,
 				7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37RV6JU9V7;
+				DEVELOPMENT_TEAM = RNY2633B6K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiggyBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -465,7 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37RV6JU9V7;
+				DEVELOPMENT_TEAM = RNY2633B6K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PiggyBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
