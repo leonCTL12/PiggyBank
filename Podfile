@@ -6,6 +6,7 @@ target 'PiggyBank' do
   use_frameworks!
 
   # Pods for PiggyBank
+pod 'RealmSwift'
 
   target 'PiggyBankTests' do
     inherit! :search_paths
