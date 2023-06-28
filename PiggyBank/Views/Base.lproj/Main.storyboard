@@ -170,7 +170,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="FRO-zT-SQM" kind="show" id="vT1-s4-Mpy"/>
+                        <segue destination="FRO-zT-SQM" kind="show" identifier="goToDetail" id="vT1-s4-Mpy"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-PD-Qmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,6 +236,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdY-Nd-1bd"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="ykk-lp-lK5" id="NfP-Nl-qLJ"/>
+                        <outlet property="nameLabel" destination="qPH-ha-ogu" id="Qto-Kd-cez"/>
+                        <outlet property="targetLabel" destination="eg6-dL-zOF" id="3UZ-D3-iqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEc-1B-TTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

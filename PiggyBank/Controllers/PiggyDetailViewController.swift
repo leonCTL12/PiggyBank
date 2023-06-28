@@ -8,22 +8,28 @@
 import UIKit
 
 class PiggyDetailViewController: UIViewController {
+    
+    var bank: PiggyBank?
 
+    @IBOutlet private weak var targetLabel: UILabel!
+    
+    @IBOutlet private weak var nameLabel: UILabel!
+    
+    @IBOutlet private weak var amountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureView() {
+        guard let piggyBank = bank else {
+            fatalError("Bank not found")
+        }
+        nameLabel.text = piggyBank.name
+        targetLabel.text = "Target: $\(piggyBank.target)"
+        amountLabel.text = "Saved Amount: $\(piggyBank.amount)"
     }
-    */
-
+    
+    
 }

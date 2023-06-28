@@ -15,6 +15,8 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     
     let realm = try! Realm()
     
+    var selectedBank: PiggyBank?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRealm()
@@ -68,6 +70,22 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         present(popUp, animated: true)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedBank = piggyBanks?[indexPath.row]
+        performSegue(withIdentifier: "goToDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "goToDetail" {
+            return
+        }
+        
+        guard let destinationVC = segue.destination as? PiggyDetailViewController else { fatalError("Destination is not detailed view") }
+        
+  
+        destinationVC.bank = selectedBank   
+    }
+    
     //MARK: - Save Load
     //TODO: Extract it into a repository
     func savePiggyBank(piggyBank bank: PiggyBank) {
@@ -79,7 +97,6 @@ class PiggyBankCollectionViewController: UICollectionViewController {
             print("Error saving context: \(error)")
         }
     }
-    
     
     private func loadRealm() {
         piggyBanks = realm.objects(PiggyBank.self)
