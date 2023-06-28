@@ -12,7 +12,6 @@ import UIKit
 class PiggyBankCollectionViewController: UICollectionViewController {
 
     var piggyBanks: [PiggyBank] = []
-    var temp = ["aaa", "bbb", "eruhweyfghweyuifhweyuifhbwyuefhbuw"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +26,14 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return temp.count
+        return piggyBanks.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PiggyCell", for: indexPath)
         if let piggyCell = cell as? PiggyCell
         {
-            piggyCell.setCellName(to: temp[indexPath.row])
+            piggyCell.setCellName(to: piggyBanks[indexPath.row].name)
             cell = piggyCell
         }
         

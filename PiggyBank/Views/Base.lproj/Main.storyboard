@@ -132,7 +132,7 @@
                                                 <constraint firstAttribute="height" constant="100" id="UHB-Jx-CTf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-mb-IZi">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-mb-IZi">
                                             <rect key="frame" x="5" y="100" width="120" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="dmE-Mo-bAk"/>
@@ -166,7 +166,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-PD-Qmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="713.38028169014092"/>
+            <point key="canvasLocation" x="1940" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dvg-rj-iyK">
