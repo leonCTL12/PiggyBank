@@ -9,11 +9,10 @@ import UIKit
 
 class PiggyCell: UICollectionViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setCellName(to name: String) {
+        nameLabel?.text = name
     }
 
 }

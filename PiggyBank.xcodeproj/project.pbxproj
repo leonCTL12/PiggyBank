@@ -16,8 +16,9 @@
 		7345FFBA2A4AD138004B7882 /* PiggyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFB92A4AD138004B7882 /* PiggyBankTests.swift */; };
 		7345FFC42A4AD138004B7882 /* PiggyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */; };
 		7345FFC62A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */; };
+		73A7CC392A4BEB7C001C4361 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */; };
+		73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */; };
 		73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */; };
-		73AE6AC62A4AE7A300C448FF /* PiggyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		7345FFBF2A4AD138004B7882 /* PiggyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiggyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITests.swift; sourceTree = "<group>"; };
 		7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
+		73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankCollectionViewController.swift; sourceTree = "<group>"; };
 		73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyCell.swift; sourceTree = "<group>"; };
-		73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PiggyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		7345FFA12A4AD137004B7882 /* PiggyBank */ = {
 			isa = PBXGroup;
 			children = (
+				73A7CC372A4BEB38001C4361 /* Models */,
 				73AE6AC22A4AE74E00C448FF /* Controllers */,
 				73AE6AC12A4AE72C00C448FF /* Views */,
 				7345FFA22A4AD137004B7882 /* AppDelegate.swift */,
@@ -130,12 +133,19 @@
 			path = PiggyBankUITests;
 			sourceTree = "<group>";
 		};
+		73A7CC372A4BEB38001C4361 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		73AE6AC12A4AE72C00C448FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				7345FFA82A4AD137004B7882 /* Main.storyboard */,
 				73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */,
-				73AE6AC42A4AE7A300C448FF /* PiggyCell.xib */,
 				7345FFAD2A4AD138004B7882 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -145,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				7345FFA62A4AD137004B7882 /* TitleViewController.swift */,
+				73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,7 +266,6 @@
 			files = (
 				7345FFAF2A4AD138004B7882 /* LaunchScreen.storyboard in Resources */,
 				7345FFAC2A4AD138004B7882 /* Assets.xcassets in Resources */,
-				73AE6AC62A4AE7A300C448FF /* PiggyCell.xib in Resources */,
 				7345FFAA2A4AD137004B7882 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +293,8 @@
 			files = (
 				7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */,
 				7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */,
+				73A7CC392A4BEB7C001C4361 /* PiggyBank.swift in Sources */,
+				73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */,
 				73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */,
 				7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */,
 			);
