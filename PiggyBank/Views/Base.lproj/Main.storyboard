@@ -162,7 +162,13 @@
                             <outlet property="delegate" destination="IX7-XS-afg" id="xCG-RK-D7V"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="5oy-MJ-Xpl"/>
+                    <navigationItem key="navigationItem" id="5oy-MJ-Xpl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aXp-Jy-2X0">
+                            <connections>
+                                <action selector="onAddButtonClicked:" destination="IX7-XS-afg" id="0eB-k4-dHP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="FRO-zT-SQM" kind="show" id="vT1-s4-Mpy"/>
                     </connections>

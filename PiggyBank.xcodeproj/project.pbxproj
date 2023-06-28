@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55EC546813B1FD986B1BB090 /* Pods_PiggyBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD7E7784651A01093918275 /* Pods_PiggyBank.framework */; };
+		70A25E7889A62AAC06978E39 /* Pods_PiggyBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F26D277639C96F3C8799A8 /* Pods_PiggyBankTests.framework */; };
 		7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA22A4AD137004B7882 /* AppDelegate.swift */; };
 		7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA42A4AD137004B7882 /* SceneDelegate.swift */; };
 		7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA62A4AD137004B7882 /* TitleViewController.swift */; };
@@ -20,6 +22,7 @@
 		73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */; };
 		73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */; };
 		73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */; };
+		828583D8B67B7DC0679C3F4A /* Pods_PiggyBank_PiggyBankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829B6B7831D38CA3B28317DC /* Pods_PiggyBank_PiggyBankUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073608CD43765470640DAA45 /* Pods-PiggyBank-PiggyBankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank-PiggyBankUITests.release.xcconfig"; path = "Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		11ECA38D8670089C06AA4D7E /* Pods-PiggyBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank.release.xcconfig"; path = "Target Support Files/Pods-PiggyBank/Pods-PiggyBank.release.xcconfig"; sourceTree = "<group>"; };
+		2392F2E1AD92764BAD6D9AE9 /* Pods-PiggyBankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBankTests.release.xcconfig"; path = "Target Support Files/Pods-PiggyBankTests/Pods-PiggyBankTests.release.xcconfig"; sourceTree = "<group>"; };
+		36DB0C5E3E979ABCF42DB98F /* Pods-PiggyBank-PiggyBankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank-PiggyBankUITests.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD7E7784651A01093918275 /* Pods_PiggyBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FF9F2A4AD137004B7882 /* PiggyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFA22A4AD137004B7882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7345FFA42A4AD137004B7882 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 		73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankCollectionViewController.swift; sourceTree = "<group>"; };
 		73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyDetailViewController.swift; sourceTree = "<group>"; };
 		73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyCell.swift; sourceTree = "<group>"; };
+		829B6B7831D38CA3B28317DC /* Pods_PiggyBank_PiggyBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyBank_PiggyBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B108B01B9D26E116DB8E3774 /* Pods-PiggyBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBank/Pods-PiggyBank.debug.xcconfig"; sourceTree = "<group>"; };
+		B728FD569B18B5D0BC8CDCA8 /* Pods-PiggyBankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBankTests.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBankTests/Pods-PiggyBankTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3F26D277639C96F3C8799A8 /* Pods_PiggyBankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyBankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EC546813B1FD986B1BB090 /* Pods_PiggyBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A25E7889A62AAC06978E39 /* Pods_PiggyBankTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828583D8B67B7DC0679C3F4A /* Pods_PiggyBank_PiggyBankUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2406ED909E1BE9404E98D4F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DD7E7784651A01093918275 /* Pods_PiggyBank.framework */,
+				829B6B7831D38CA3B28317DC /* Pods_PiggyBank_PiggyBankUITests.framework */,
+				D3F26D277639C96F3C8799A8 /* Pods_PiggyBankTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7345FF962A4AD137004B7882 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,8 @@
 				7345FFB82A4AD138004B7882 /* PiggyBankTests */,
 				7345FFC22A4AD138004B7882 /* PiggyBankUITests */,
 				7345FFA02A4AD137004B7882 /* Products */,
+				A392128DA19C373DFE2014F1 /* Pods */,
+				2406ED909E1BE9404E98D4F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +190,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A392128DA19C373DFE2014F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B108B01B9D26E116DB8E3774 /* Pods-PiggyBank.debug.xcconfig */,
+				11ECA38D8670089C06AA4D7E /* Pods-PiggyBank.release.xcconfig */,
+				36DB0C5E3E979ABCF42DB98F /* Pods-PiggyBank-PiggyBankUITests.debug.xcconfig */,
+				073608CD43765470640DAA45 /* Pods-PiggyBank-PiggyBankUITests.release.xcconfig */,
+				B728FD569B18B5D0BC8CDCA8 /* Pods-PiggyBankTests.debug.xcconfig */,
+				2392F2E1AD92764BAD6D9AE9 /* Pods-PiggyBankTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7345FFC92A4AD138004B7882 /* Build configuration list for PBXNativeTarget "PiggyBank" */;
 			buildPhases = (
+				79D02C446EB9C3082D4240AE /* [CP] Check Pods Manifest.lock */,
 				7345FF9B2A4AD137004B7882 /* Sources */,
 				7345FF9C2A4AD137004B7882 /* Frameworks */,
 				7345FF9D2A4AD137004B7882 /* Resources */,
+				B9F5EA6E286A2C51F1112353 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7345FFCC2A4AD138004B7882 /* Build configuration list for PBXNativeTarget "PiggyBankTests" */;
 			buildPhases = (
+				3E0857F632447B698D14FF41 /* [CP] Check Pods Manifest.lock */,
 				7345FFB12A4AD138004B7882 /* Sources */,
 				7345FFB22A4AD138004B7882 /* Frameworks */,
 				7345FFB32A4AD138004B7882 /* Resources */,
@@ -205,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7345FFCF2A4AD138004B7882 /* Build configuration list for PBXNativeTarget "PiggyBankUITests" */;
 			buildPhases = (
+				257F83456CDFB1D892F44ABE /* [CP] Check Pods Manifest.lock */,
 				7345FFBB2A4AD138004B7882 /* Sources */,
 				7345FFBC2A4AD138004B7882 /* Frameworks */,
 				7345FFBD2A4AD138004B7882 /* Resources */,
+				A17050481BDA895057283434 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +334,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		257F83456CDFB1D892F44ABE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiggyBank-PiggyBankUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0857F632447B698D14FF41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiggyBankTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79D02C446EB9C3082D4240AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiggyBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A17050481BDA895057283434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F5EA6E286A2C51F1112353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyBank/Pods-PiggyBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyBank/Pods-PiggyBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiggyBank/Pods-PiggyBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7345FF9B2A4AD137004B7882 /* Sources */ = {
@@ -472,6 +621,7 @@
 		};
 		7345FFCA2A4AD138004B7882 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B108B01B9D26E116DB8E3774 /* Pods-PiggyBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -500,6 +650,7 @@
 		};
 		7345FFCB2A4AD138004B7882 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11ECA38D8670089C06AA4D7E /* Pods-PiggyBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -528,6 +679,7 @@
 		};
 		7345FFCD2A4AD138004B7882 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B728FD569B18B5D0BC8CDCA8 /* Pods-PiggyBankTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +700,7 @@
 		};
 		7345FFCE2A4AD138004B7882 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2392F2E1AD92764BAD6D9AE9 /* Pods-PiggyBankTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,6 +721,7 @@
 		};
 		7345FFD02A4AD138004B7882 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DB0C5E3E979ABCF42DB98F /* Pods-PiggyBank-PiggyBankUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +740,7 @@
 		};
 		7345FFD12A4AD138004B7882 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 073608CD43765470640DAA45 /* Pods-PiggyBank-PiggyBankUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,41 +6,26 @@
 //
 
 import Foundation
+import RealmSwift
 
-class PiggyBank {
-    private var _name: String;
-    public var name: String {
-        get {
-            return _name
-        }
-    }
+class PiggyBank: Object {
+    @objc dynamic var name: String = ""
     
-    private var _amount: Float;
+    @objc dynamic var target: Float = 0.0
     
-    public var amount: Float {
-        get {
-            return _amount
-        }
-    }
-    private var _target: Float
-    
-    private var target: Float {
-        get {
-            return _target
-        }
-    }
-    
-    init(target: Float, name: String) {
-        self._target = target
-        self._name = name
-        self._amount = 0
-    }
+    @objc dynamic var amount: Float = 0
+
     
     public func changeTarget(to amount: Float) {
-        _target = amount
+        target = amount
     }
     
     public func addToSavingPool(by amount: Float) {
-        _amount += amount
+        self.amount += amount
+    }
+    
+    public func initialise(withName name: String, withTarget target: Float) {
+        self.name = name
+        self.target = target
     }
 }
