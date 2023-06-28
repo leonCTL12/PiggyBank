@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				7345FFA82A4AD137004B7882 /* Main.storyboard */,
-				73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */,
 				7345FFAD2A4AD138004B7882 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -185,6 +184,7 @@
 			children = (
 				7345FFA62A4AD137004B7882 /* TitleViewController.swift */,
 				73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */,
+				73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */,
 				73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */,
 			);
 			path = Controllers;
@@ -200,7 +200,6 @@
 				B728FD569B18B5D0BC8CDCA8 /* Pods-PiggyBankTests.debug.xcconfig */,
 				2392F2E1AD92764BAD6D9AE9 /* Pods-PiggyBankTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

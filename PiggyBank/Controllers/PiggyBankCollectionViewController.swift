@@ -11,32 +11,31 @@ import RealmSwift
 
 class PiggyBankCollectionViewController: UICollectionViewController {
 
-    var piggyBanks: [PiggyBank] = []
+    var piggyBanks: Results<PiggyBank>?
     
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Realm.Configuration.defaultConfiguration.fileURL)
-
+        loadRealm()
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return piggyBanks.count
+        return piggyBanks?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PiggyCell", for: indexPath)
         if let piggyCell = cell as? PiggyCell
         {
-            piggyCell.setCellName(to: piggyBanks[indexPath.row].name)
-            cell = piggyCell
+            if let bank = piggyBanks?[indexPath.row] {
+                piggyCell.configure(withPiggyBank: bank)
+                cell = piggyCell
+            }
         }
         
         return cell
     }
-
-
 
     @IBAction func onAddButtonClicked(_ sender: UIBarButtonItem) {
         var nameTextField = UITextField()
@@ -58,6 +57,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
                 let bank = PiggyBank()
                 bank.initialise(withName: nameTextField.text!, withTarget: target)
                 self.savePiggyBank(piggyBank: bank)
+                self.collectionView.reloadData()
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -68,6 +68,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         present(popUp, animated: true)
     }
     
+    //MARK: - Save Load
     //TODO: Extract it into a repository
     func savePiggyBank(piggyBank bank: PiggyBank) {
         do {
@@ -79,5 +80,9 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         }
     }
     
-
+    
+    private func loadRealm() {
+        piggyBanks = realm.objects(PiggyBank.self)
+        collectionView.reloadData()
+    }
 }

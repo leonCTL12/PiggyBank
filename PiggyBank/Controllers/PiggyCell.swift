@@ -11,8 +11,7 @@ class PiggyCell: UICollectionViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
     
-    func setCellName(to name: String) {
-        nameLabel?.text = name
+    func configure(withPiggyBank piggyBank: PiggyBank) {
+        nameLabel?.text = piggyBank.name
     }
-
 }
