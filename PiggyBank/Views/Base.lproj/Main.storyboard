@@ -185,9 +185,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="8IF-cu-GHS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-93-cvq">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-Pc-gw5">
                                 <rect key="frame" x="5" y="153" width="383" height="615"/>
@@ -219,10 +218,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x7-5u-tlJ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-zT-XMw">
                                         <rect key="frame" x="0.0" y="580.66666666666663" width="383" height="34.333333333333371"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                    </button>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-Ga-uef">
+                                                <rect key="frame" x="0.0" y="0.0" width="296.33333333333331" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x7-5u-tlJ">
+                                                <rect key="frame" x="296.33333333333331" y="0.0" width="86.666666666666686" height="34.333333333333336"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -230,9 +239,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Eeg-Pc-gw5" firstAttribute="leading" secondItem="DEm-C0-FIb" secondAttribute="leading" constant="5" id="NqM-zC-gZf"/>
+                            <constraint firstAttribute="bottom" secondItem="ch5-93-cvq" secondAttribute="bottom" id="PgD-na-KjX"/>
                             <constraint firstItem="DEm-C0-FIb" firstAttribute="bottom" secondItem="Eeg-Pc-gw5" secondAttribute="bottom" constant="50" id="Rsj-CH-zsI"/>
                             <constraint firstItem="DEm-C0-FIb" firstAttribute="trailing" secondItem="Eeg-Pc-gw5" secondAttribute="trailing" constant="5" id="afo-Kn-a3M"/>
                             <constraint firstItem="Eeg-Pc-gw5" firstAttribute="top" secondItem="DEm-C0-FIb" secondAttribute="top" constant="50" id="lkD-gz-xdA"/>
+                            <constraint firstItem="ch5-93-cvq" firstAttribute="top" secondItem="TKk-Be-gjW" secondAttribute="top" id="nci-Sn-gWM"/>
+                            <constraint firstItem="ch5-93-cvq" firstAttribute="leading" secondItem="DEm-C0-FIb" secondAttribute="leading" id="rVa-LT-NgZ"/>
+                            <constraint firstItem="ch5-93-cvq" firstAttribute="trailing" secondItem="DEm-C0-FIb" secondAttribute="trailing" id="rXl-SD-Te0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdY-Nd-1bd"/>
