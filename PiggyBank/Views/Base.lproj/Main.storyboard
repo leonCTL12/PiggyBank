@@ -163,10 +163,77 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="5oy-MJ-Xpl"/>
+                    <connections>
+                        <segue destination="FRO-zT-SQM" kind="show" id="vT1-s4-Mpy"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-PD-Qmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940" y="-27"/>
+        </scene>
+        <!--Piggy Detail View Controller-->
+        <scene sceneID="WCj-wq-5Dx">
+            <objects>
+                <viewController id="FRO-zT-SQM" customClass="PiggyDetailViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TKk-Be-gjW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="8IF-cu-GHS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-Pc-gw5">
+                                <rect key="frame" x="5" y="153" width="383" height="615"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-ha-ogu" userLabel="Name">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6NX-b1-Sjl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PiggyBankIcon" translatesAutoresizingMaskIntoConstraints="NO" id="opB-E5-ZVy">
+                                        <rect key="frame" x="0.0" y="99.666666666666657" width="383" height="249.99999999999997"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="Wgt-ko-fHs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target: $1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-dL-zOF" userLabel="Target">
+                                        <rect key="frame" x="0.0" y="409" width="383" height="26.333333333333314"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Amount: $1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-lp-lK5">
+                                        <rect key="frame" x="0.0" y="495" width="383" height="26.333333333333371"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x7-5u-tlJ">
+                                        <rect key="frame" x="0.0" y="580.66666666666663" width="383" height="34.333333333333371"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DEm-C0-FIb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eeg-Pc-gw5" firstAttribute="leading" secondItem="DEm-C0-FIb" secondAttribute="leading" constant="5" id="NqM-zC-gZf"/>
+                            <constraint firstItem="DEm-C0-FIb" firstAttribute="bottom" secondItem="Eeg-Pc-gw5" secondAttribute="bottom" constant="50" id="Rsj-CH-zsI"/>
+                            <constraint firstItem="DEm-C0-FIb" firstAttribute="trailing" secondItem="Eeg-Pc-gw5" secondAttribute="trailing" constant="5" id="afo-Kn-a3M"/>
+                            <constraint firstItem="Eeg-Pc-gw5" firstAttribute="top" secondItem="DEm-C0-FIb" secondAttribute="top" constant="50" id="lkD-gz-xdA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pdY-Nd-1bd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEc-1B-TTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2747" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dvg-rj-iyK">

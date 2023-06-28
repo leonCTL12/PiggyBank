@@ -18,6 +18,7 @@
 		7345FFC62A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */; };
 		73A7CC392A4BEB7C001C4361 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */; };
 		73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */; };
+		73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */; };
 		73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
 		73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankCollectionViewController.swift; sourceTree = "<group>"; };
+		73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyDetailViewController.swift; sourceTree = "<group>"; };
 		73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 			children = (
 				7345FFA62A4AD137004B7882 /* TitleViewController.swift */,
 				73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */,
+				73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */,
 				73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */,
 				7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */,
+				73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
