@@ -17,11 +17,15 @@ class TitleViewController: UIViewController {
     }
     
     func goToCollectionView() {
-        
-        performSegue(withIdentifier: "NoLoginSegue", sender: self)
+        let repository = RealmDataRepository()
+        guard let vc = storyboard?.instantiateViewController(identifier: "PiggyBankCollectionViewController", creator: { coder in
+            return PiggyBankCollectionViewController(coder: coder, using: repository)
+        }) else {
+            fatalError("Failed to load collection view")
+        }
+            navigationController?.pushViewController(vc, animated: true)
     }
     
-
     @IBAction func onWithoutLoginClick(_ sender: UIButton) {
         goToCollectionView()
     }

@@ -17,26 +17,28 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     
     var selectedBank: PiggyBank?
     
-    let repository: DataRepositoryProtocol = RealmDataRepository()
+    let repository: DataRepositoryProtocol
     
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshData()
     }
     
-//    init(with repository: DataRepositoryProtocol) {
-//        self.repository = repository
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    init?(coder:NSCoder, using repository: DataRepositoryProtocol) {
+        self.repository = repository
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
 
+    //MARK: - Collection View Data Source
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return piggyBanks.count
     }
@@ -53,6 +55,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    //MARK: - Event
     @IBAction func onAddButtonClicked(_ sender: UIBarButtonItem) {
         let popUp = constructPopUp()
         
@@ -91,11 +94,8 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         return popUp
     }
     
-    private func refreshData() {
-        self.piggyBanks = self.repository.getPiggyBanks()
-        self.collectionView.reloadData()
-    }
     
+    //MARK: - Collection View Delegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedBank = piggyBanks[indexPath.row]
         performSegue(withIdentifier: "goToDetail", sender: self)
@@ -110,5 +110,11 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         destinationVC.bank = selectedBank   
     }
     
+    //MARK: - General
+    private func refreshData() {
+        self.piggyBanks = self.repository.getPiggyBanks()
+        self.collectionView.reloadData()
+    }
+
 
 }
