@@ -21,6 +21,10 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         loadRealm()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return piggyBanks?.count ?? 0

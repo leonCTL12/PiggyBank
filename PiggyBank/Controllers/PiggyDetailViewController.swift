@@ -45,10 +45,33 @@ class PiggyDetailViewController: UIViewController {
         
     }
     
+    @IBAction func onBreakButtonClicked(_ sender: UIButton) {
+        let tempBank = bank
+        self.bank = nil
+        removePiggyBankFromRealm(bank: tempBank!)
+        
+        
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
+    }
+    
+    //MARK: - Realm
     private func addAmountToPiggyBank(by amount: Float) {
         do {
             try realm.write {
                 bank?.addToSavingPool(by: amount)
+            }
+        } catch {
+            fatalError("Cannot update the bank amount")
+        }
+    }
+    
+    private func removePiggyBankFromRealm(bank: PiggyBank) {
+        
+        do {
+            try realm.write {
+                realm.delete(bank)
             }
         } catch {
             fatalError("Cannot update the bank amount")

@@ -201,25 +201,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PiggyBankIcon" translatesAutoresizingMaskIntoConstraints="NO" id="opB-E5-ZVy">
-                                        <rect key="frame" x="0.0" y="99.666666666666657" width="383" height="249.99999999999997"/>
+                                        <rect key="frame" x="0.0" y="80.666666666666657" width="383" height="249.99999999999997"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="Wgt-ko-fHs"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target: $1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-dL-zOF" userLabel="Target">
-                                        <rect key="frame" x="0.0" y="409" width="383" height="26.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="371.33333333333337" width="383" height="26.333333333333314"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Amount: $1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-lp-lK5">
-                                        <rect key="frame" x="0.0" y="495" width="383" height="26.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="438.66666666666663" width="383" height="26.333333333333314"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-zT-XMw">
-                                        <rect key="frame" x="0.0" y="580.66666666666663" width="383" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="505.66666666666657" width="383" height="34.333333333333314"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-Ga-uef">
                                                 <rect key="frame" x="0.0" y="0.0" width="333.33333333333331" height="34.333333333333336"/>
@@ -235,6 +235,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQf-Q5-BXm">
+                                        <rect key="frame" x="0.0" y="580.66666666666663" width="383" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Break the Piggy Bank!"/>
+                                        <connections>
+                                            <action selector="onBreakButtonClicked:" destination="FRO-zT-SQM" eventType="touchUpInside" id="Yyv-WG-PDR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
