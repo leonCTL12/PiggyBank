@@ -405,6 +405,9 @@
                                                 <rect key="frame" x="0.0" y="110" width="363" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                <connections>
+                                                    <action selector="onRegisterButtonClicked:" destination="ojn-U6-AcW" eventType="touchUpInside" id="ijZ-SG-97E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -436,6 +439,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="0Aj-GZ-3eQ"/>
                     <connections>
+                        <outlet property="emailTextField" destination="4ob-Ep-RY0" id="30w-mx-RJ2"/>
+                        <outlet property="passwordTextField" destination="TUb-d4-TgX" id="Yag-Qc-KEP"/>
                         <segue destination="IX7-XS-afg" kind="show" identifier="goToPiggyBankCollection" id="aug-Oy-Hyw"/>
                     </connections>
                 </viewController>
