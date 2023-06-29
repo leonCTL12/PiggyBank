@@ -222,13 +222,16 @@
                                         <rect key="frame" x="0.0" y="580.66666666666663" width="383" height="34.333333333333371"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-Ga-uef">
-                                                <rect key="frame" x="0.0" y="0.0" width="296.33333333333331" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333.33333333333331" height="34.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x7-5u-tlJ">
-                                                <rect key="frame" x="296.33333333333331" y="0.0" width="86.666666666666686" height="34.333333333333336"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                <rect key="frame" x="333.33333333333331" y="0.0" width="49.666666666666686" height="34.333333333333336"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="onAddButtonClicked:" destination="FRO-zT-SQM" eventType="touchUpInside" id="VDD-H7-Hww"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -251,6 +254,7 @@
                     <navigationItem key="navigationItem" id="pdY-Nd-1bd"/>
                     <connections>
                         <outlet property="amountLabel" destination="ykk-lp-lK5" id="NfP-Nl-qLJ"/>
+                        <outlet property="amountTextField" destination="cDA-Ga-uef" id="2Ja-Uj-HDx"/>
                         <outlet property="nameLabel" destination="qPH-ha-ogu" id="Qto-Kd-cez"/>
                         <outlet property="targetLabel" destination="eg6-dL-zOF" id="3UZ-D3-iqR"/>
                     </connections>

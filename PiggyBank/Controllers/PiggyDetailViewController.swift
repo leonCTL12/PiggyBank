@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PiggyDetailViewController: UIViewController {
     
@@ -16,6 +17,10 @@ class PiggyDetailViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     
     @IBOutlet private weak var amountLabel: UILabel!
+    
+    @IBOutlet weak var amountTextField: UITextField!
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +34,25 @@ class PiggyDetailViewController: UIViewController {
         nameLabel.text = piggyBank.name
         targetLabel.text = "Target: $\(piggyBank.target)"
         amountLabel.text = "Saved Amount: $\(piggyBank.amount)"
+    }
+    
+    @IBAction func onAddButtonClicked(_ sender: UIButton) {
+        guard let amount = Float(amountTextField.text!) else { return }
+        
+        addAmountToPiggyBank(by: amount)
+        
+        configureView()
+        
+    }
+    
+    private func addAmountToPiggyBank(by amount: Float) {
+        do {
+            try realm.write {
+                bank?.addToSavingPool(by: amount)
+            }
+        } catch {
+            fatalError("Cannot update the bank amount")
+        }
     }
     
     
