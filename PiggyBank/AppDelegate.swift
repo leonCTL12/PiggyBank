@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error Initialising new realm, \(error)")
         }
         
-        FirebaseApp.configure()
-        let db = Firestore.firestore()
+//        FirebaseApp.configure()
+//        let db = Firestore.firestore()
         
         return true
     }

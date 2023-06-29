@@ -15,8 +15,6 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     
     let realm = try! Realm()
     
-    var selectedBank: PiggyBank?
-    
     let repository: DataRepositoryProtocol
     
     //MARK: - Life cycle
@@ -35,7 +33,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        collectionView.reloadData()
+        refreshData()
     }
 
     //MARK: - Collection View Data Source
@@ -97,18 +95,21 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     
     //MARK: - Collection View Delegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedBank = piggyBanks[indexPath.row]
-        performSegue(withIdentifier: "goToDetail", sender: self)
+        goToDetailView(of: piggyBanks[indexPath.row])
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier != "goToDetail" {
-            return
+    func goToDetailView(of piggyBank: PiggyBank) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "PiggyDetailViewController", creator: {
+            coder in
+            return PiggyDetailViewController(coder: coder, repository: self.repository, bank: piggyBank)
+        }) else {
+            fatalError("Failed to load detail view")
         }
-        guard let destinationVC = segue.destination as? PiggyDetailViewController else { fatalError("Destination is not detailed view") }
-  
-        destinationVC.bank = selectedBank   
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
+
     
     //MARK: - General
     private func refreshData() {

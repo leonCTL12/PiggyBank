@@ -187,7 +187,7 @@
         <!--Piggy Detail View Controller-->
         <scene sceneID="WCj-wq-5Dx">
             <objects>
-                <viewController id="FRO-zT-SQM" customClass="PiggyDetailViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PiggyDetailViewController" storyboardIdentifier="PiggyDetailViewController" id="FRO-zT-SQM" customClass="PiggyDetailViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKk-Be-gjW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,8 +10,6 @@ import RealmSwift
 
 class PiggyDetailViewController: UIViewController {
     
-    var bank: PiggyBank?
-
     @IBOutlet private weak var targetLabel: UILabel!
     
     @IBOutlet private weak var nameLabel: UILabel!
@@ -20,63 +18,44 @@ class PiggyDetailViewController: UIViewController {
     
     @IBOutlet weak var amountTextField: UITextField!
     
-    let realm = try! Realm()
+    private var bank: PiggyBank
+    private var repository: DataRepositoryProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
     }
     
+    init?(coder: NSCoder, repository: DataRepositoryProtocol, bank: PiggyBank) {
+        self.bank = bank
+        self.repository = repository
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+          fatalError("You must create this view controller with a user.")
+      }
+    
     private func configureView() {
-        guard let piggyBank = bank else {
-            fatalError("Bank not found")
-        }
-        nameLabel.text = piggyBank.name
-        targetLabel.text = "Target: $\(piggyBank.target)"
-        amountLabel.text = "Saved Amount: $\(piggyBank.amount)"
+        nameLabel.text = bank.name
+        targetLabel.text = "Target: $\(bank.target)"
+        amountLabel.text = "Saved Amount: $\(bank.amount)"
     }
     
     @IBAction func onAddButtonClicked(_ sender: UIButton) {
         guard let amount = Float(amountTextField.text!) else { return }
-        
-        addAmountToPiggyBank(by: amount)
-        
+
+        repository.increasePiggyBankAmount(bank, amount)
         configureView()
-        
     }
     
     @IBAction func onBreakButtonClicked(_ sender: UIButton) {
-        let tempBank = bank
-        self.bank = nil
-        removePiggyBankFromRealm(bank: tempBank!)
-        
+
+        repository.deletePiggyBank(bank)
         
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
         }
-    }
-    
-    //MARK: - Realm
-    private func addAmountToPiggyBank(by amount: Float) {
-        do {
-            try realm.write {
-                bank?.addToSavingPool(by: amount)
-            }
-        } catch {
-            fatalError("Cannot update the bank amount")
-        }
-    }
-    
-    private func removePiggyBankFromRealm(bank: PiggyBank) {
         
-        do {
-            try realm.write {
-                realm.delete(bank)
-            }
-        } catch {
-            fatalError("Cannot update the bank amount")
-        }
     }
-    
-    
 }

@@ -23,7 +23,8 @@ class TitleViewController: UIViewController {
         }) else {
             fatalError("Failed to load collection view")
         }
-            navigationController?.pushViewController(vc, animated: true)
+            
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onWithoutLoginClick(_ sender: UIButton) {

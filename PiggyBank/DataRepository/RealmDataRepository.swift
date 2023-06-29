@@ -27,12 +27,24 @@ class RealmDataRepository: DataRepositoryProtocol {
         return Array(piggyBanks)
     }
     
-    func updatePiggyBanks(_ bank: PiggyBank) {
-        
+    func increasePiggyBankAmount(_ bank: PiggyBank, _ amount: Float) {
+        do {
+            try realm.write {
+                bank.addToSavingPool(by: amount)
+            }
+        } catch {
+            fatalError("Cannot update the bank amount")
+        }
     }
     
     func deletePiggyBank(_ bank: PiggyBank) {
-        
+        do {
+            try realm.write {
+                realm.delete(bank)
+            }
+        } catch {
+            fatalError("Cannot update the bank amount")
+        }
     }
     
     
