@@ -12,13 +12,6 @@
         <!--Title View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sji-i0-ynF">
-                    <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                </button>
                 <viewController id="BYZ-38-t0r" customClass="TitleViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -103,6 +96,13 @@
                         <outlet property="titleLabel" destination="8qw-UC-N8x" id="LKN-JE-Tu2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sji-i0-ynF">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </objects>
             <point key="canvasLocation" x="1054.1984732824426" y="-27.464788732394368"/>
         </scene>
@@ -298,7 +298,6 @@
         <!--Sign Up-->
         <scene sceneID="f5p-WC-io2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MhM-aG-jPi" sceneMemberID="firstResponder"/>
                 <viewController id="44d-Yl-NIE" customClass="RegisterViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mq9-7K-xVe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -357,10 +356,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="LZk-nf-0Ti"/>
-                    <connections>
-                        <segue destination="IX7-XS-afg" kind="show" identifier="goToPiggyBankCollection" id="dG0-pi-O1C"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhM-aG-jPi" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="pJ5-cM-5Nh">
                     <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -373,7 +370,6 @@
         <!--Sign In-->
         <scene sceneID="asS-70-Dtl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RCP-oj-raE" sceneMemberID="firstResponder"/>
                 <viewController id="ojn-U6-AcW" customClass="LoginViewController" customModule="PiggyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6u-Ah-k3Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -436,6 +432,7 @@
                         <segue destination="IX7-XS-afg" kind="show" identifier="goToPiggyBankCollection" id="aug-Oy-Hyw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCP-oj-raE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1972" y="347"/>
         </scene>

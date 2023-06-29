@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		55EC546813B1FD986B1BB090 /* Pods_PiggyBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD7E7784651A01093918275 /* Pods_PiggyBank.framework */; };
 		70A25E7889A62AAC06978E39 /* Pods_PiggyBankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F26D277639C96F3C8799A8 /* Pods_PiggyBankTests.framework */; };
+		730FBE0C2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */; };
+		730FBE0D2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */; };
+		730FBE0E2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */; };
 		7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA22A4AD137004B7882 /* AppDelegate.swift */; };
 		7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA42A4AD137004B7882 /* SceneDelegate.swift */; };
 		7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFA62A4AD137004B7882 /* TitleViewController.swift */; };
@@ -50,6 +53,7 @@
 		2392F2E1AD92764BAD6D9AE9 /* Pods-PiggyBankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBankTests.release.xcconfig"; path = "Target Support Files/Pods-PiggyBankTests/Pods-PiggyBankTests.release.xcconfig"; sourceTree = "<group>"; };
 		36DB0C5E3E979ABCF42DB98F /* Pods-PiggyBank-PiggyBankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank-PiggyBankUITests.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBank-PiggyBankUITests/Pods-PiggyBank-PiggyBankUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DD7E7784651A01093918275 /* Pods_PiggyBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7345FF9F2A4AD137004B7882 /* PiggyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFA22A4AD137004B7882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7345FFA42A4AD137004B7882 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		7345FFA12A4AD137004B7882 /* PiggyBank */ = {
 			isa = PBXGroup;
 			children = (
+				730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */,
 				73A7CC372A4BEB38001C4361 /* Models */,
 				73AE6AC22A4AE74E00C448FF /* Controllers */,
 				73AE6AC12A4AE72C00C448FF /* Views */,
@@ -319,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7345FFAF2A4AD138004B7882 /* LaunchScreen.storyboard in Resources */,
+				730FBE0C2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */,
 				7345FFAC2A4AD138004B7882 /* Assets.xcassets in Resources */,
 				7345FFAA2A4AD137004B7882 /* Main.storyboard in Resources */,
 			);
@@ -328,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730FBE0D2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730FBE0E2A4D5C8C00706E3F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

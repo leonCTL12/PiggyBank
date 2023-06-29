@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>692443746942-neo3lni5sg54f8kjka9k081h6t4d2j56.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.692443746942-neo3lni5sg54f8kjka9k081h6t4d2j56</string>
+	<key>API_KEY</key>
+	<string>AIzaSyALcYkBwhyhNsiCprMLTxNecmPnw_d76Bs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>692443746942</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.leonchan.PiggyBank</string>
+	<key>PROJECT_ID</key>
+	<string>piggy-bank-cc626</string>
+	<key>STORAGE_BUCKET</key>
+	<string>piggy-bank-cc626.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:692443746942:ios:64a0c11d1ecc27c8cc7e2f</string>
+</dict>
+</plist>
