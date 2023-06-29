@@ -60,9 +60,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-lT-bqS">
-                                                <rect key="frame" x="114.33333333333333" y="120" width="164.33333333333337" height="60"/>
+                                                <rect key="frame" x="95" y="120" width="203" height="60"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Use Without Login"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Continue Without Login"/>
                                                 <connections>
                                                     <segue destination="IX7-XS-afg" kind="show" id="kHc-2T-Abk"/>
                                                 </connections>
@@ -370,7 +370,7 @@
             </objects>
             <point key="canvasLocation" x="1973" y="-492"/>
         </scene>
-        <!--Login-->
+        <!--Sign In-->
         <scene sceneID="asS-70-Dtl">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCP-oj-raE" sceneMemberID="firstResponder"/>
@@ -431,7 +431,7 @@
                             <constraint firstItem="TAA-NQ-aYs" firstAttribute="bottom" secondItem="oRg-ac-qlX" secondAttribute="bottom" id="pjn-96-u1W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="0Aj-GZ-3eQ"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="0Aj-GZ-3eQ"/>
                     <connections>
                         <segue destination="IX7-XS-afg" kind="show" identifier="goToPiggyBankCollection" id="aug-Oy-Hyw"/>
                     </connections>
@@ -441,7 +441,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dG0-pi-O1C"/>
+        <segue reference="kHc-2T-Abk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PiggyBankIcon" width="1200" height="1200"/>
