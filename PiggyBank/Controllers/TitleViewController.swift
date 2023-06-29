@@ -15,7 +15,16 @@ class TitleViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func goToCollectionView() {
+        
+        performSegue(withIdentifier: "NoLoginSegue", sender: self)
+    }
+    
 
-
+    @IBAction func onWithoutLoginClick(_ sender: UIButton) {
+        goToCollectionView()
+    }
+    
 }
 

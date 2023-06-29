@@ -11,39 +11,55 @@ import RealmSwift
 
 class PiggyBankCollectionViewController: UICollectionViewController {
 
-    var piggyBanks: Results<PiggyBank>?
+    var piggyBanks: [PiggyBank] = []
     
     let realm = try! Realm()
     
     var selectedBank: PiggyBank?
     
+    let repository: DataRepositoryProtocol = RealmDataRepository()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadRealm()
+        refreshData()
     }
+    
+//    init(with repository: DataRepositoryProtocol) {
+//        self.repository = repository
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return piggyBanks?.count ?? 0
+        return piggyBanks.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PiggyCell", for: indexPath)
         if let piggyCell = cell as? PiggyCell
         {
-            if let bank = piggyBanks?[indexPath.row] {
-                piggyCell.configure(withPiggyBank: bank)
-                cell = piggyCell
-            }
+            let bank = piggyBanks[indexPath.row]
+            
+            piggyCell.configure(withPiggyBank: bank)
+            cell = piggyCell
         }
-        
         return cell
     }
 
     @IBAction func onAddButtonClicked(_ sender: UIBarButtonItem) {
+        let popUp = constructPopUp()
+        
+        present(popUp, animated: true)
+    }
+    
+    private func constructPopUp() -> UIAlertController {
         var nameTextField = UITextField()
         var targetTextField = UITextField()
         
@@ -62,20 +78,26 @@ class PiggyBankCollectionViewController: UICollectionViewController {
             if let target = Float(targetTextField.text!) {
                 let bank = PiggyBank()
                 bank.initialise(withName: nameTextField.text!, withTarget: target)
-                self.savePiggyBank(piggyBank: bank)
-                self.collectionView.reloadData()
+                self.repository.savePiggyBank(bank)
+                self.refreshData()
             }
         }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
         popUp.addAction(confirmAction)
         popUp.addAction(cancelAction)
         
-        present(popUp, animated: true)
+        return popUp
+    }
+    
+    private func refreshData() {
+        self.piggyBanks = self.repository.getPiggyBanks()
+        self.collectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedBank = piggyBanks?[indexPath.row]
+        selectedBank = piggyBanks[indexPath.row]
         performSegue(withIdentifier: "goToDetail", sender: self)
     }
     
@@ -83,27 +105,10 @@ class PiggyBankCollectionViewController: UICollectionViewController {
         if segue.identifier != "goToDetail" {
             return
         }
-        
         guard let destinationVC = segue.destination as? PiggyDetailViewController else { fatalError("Destination is not detailed view") }
-        
   
         destinationVC.bank = selectedBank   
     }
     
-    //MARK: - Save Load
-    //TODO: Extract it into a repository
-    func savePiggyBank(piggyBank bank: PiggyBank) {
-        do {
-            try realm.write {
-                realm.add(bank)
-            }
-        } catch {
-            print("Error saving context: \(error)")
-        }
-    }
-    
-    private func loadRealm() {
-        piggyBanks = realm.objects(PiggyBank.self)
-        collectionView.reloadData()
-    }
+
 }

@@ -27,6 +27,8 @@
 		73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */; };
 		73CCE80E2A4D5AEA000CA113 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCE80D2A4D5AEA000CA113 /* RegisterViewController.swift */; };
 		73CCE8102A4D5AFD000CA113 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCE80F2A4D5AFD000CA113 /* LoginViewController.swift */; };
+		73F2E9122A4D6C0A003B0A03 /* DataRepostioryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F2E9112A4D6C0A003B0A03 /* DataRepostioryProtocol.swift */; };
+		73F2E9152A4D6D51003B0A03 /* RealmDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F2E9142A4D6D51003B0A03 /* RealmDataRepository.swift */; };
 		828583D8B67B7DC0679C3F4A /* Pods_PiggyBank_PiggyBankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829B6B7831D38CA3B28317DC /* Pods_PiggyBank_PiggyBankUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		73AE6AC32A4AE7A300C448FF /* PiggyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyCell.swift; sourceTree = "<group>"; };
 		73CCE80D2A4D5AEA000CA113 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		73CCE80F2A4D5AFD000CA113 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73F2E9112A4D6C0A003B0A03 /* DataRepostioryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepostioryProtocol.swift; sourceTree = "<group>"; };
+		73F2E9142A4D6D51003B0A03 /* RealmDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataRepository.swift; sourceTree = "<group>"; };
 		829B6B7831D38CA3B28317DC /* Pods_PiggyBank_PiggyBankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyBank_PiggyBankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B108B01B9D26E116DB8E3774 /* Pods-PiggyBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBank.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBank/Pods-PiggyBank.debug.xcconfig"; sourceTree = "<group>"; };
 		B728FD569B18B5D0BC8CDCA8 /* Pods-PiggyBankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyBankTests.debug.xcconfig"; path = "Target Support Files/Pods-PiggyBankTests/Pods-PiggyBankTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		7345FFA12A4AD137004B7882 /* PiggyBank */ = {
 			isa = PBXGroup;
 			children = (
+				73F2E9132A4D6C9E003B0A03 /* DataRepository */,
 				730FBE0B2A4D5C8C00706E3F /* GoogleService-Info.plist */,
 				73A7CC372A4BEB38001C4361 /* Models */,
 				73AE6AC22A4AE74E00C448FF /* Controllers */,
@@ -199,6 +204,15 @@
 				73CCE80F2A4D5AFD000CA113 /* LoginViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73F2E9132A4D6C9E003B0A03 /* DataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				73F2E9112A4D6C0A003B0A03 /* DataRepostioryProtocol.swift */,
+				73F2E9142A4D6D51003B0A03 /* RealmDataRepository.swift */,
+			);
+			path = DataRepository;
 			sourceTree = "<group>";
 		};
 		A392128DA19C373DFE2014F1 /* Pods */ = {
@@ -458,11 +472,13 @@
 			files = (
 				73CCE8102A4D5AFD000CA113 /* LoginViewController.swift in Sources */,
 				7345FFA72A4AD137004B7882 /* TitleViewController.swift in Sources */,
+				73F2E9152A4D6D51003B0A03 /* RealmDataRepository.swift in Sources */,
 				7345FFA32A4AD137004B7882 /* AppDelegate.swift in Sources */,
 				73A7CC392A4BEB7C001C4361 /* PiggyBank.swift in Sources */,
 				73CCE80E2A4D5AEA000CA113 /* RegisterViewController.swift in Sources */,
 				73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */,
 				73AE6AC52A4AE7A300C448FF /* PiggyCell.swift in Sources */,
+				73F2E9122A4D6C0A003B0A03 /* DataRepostioryProtocol.swift in Sources */,
 				7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */,
 				73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */,
 			);

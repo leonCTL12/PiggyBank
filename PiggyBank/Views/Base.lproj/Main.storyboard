@@ -57,7 +57,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Continue Without Login"/>
                                                 <connections>
-                                                    <segue destination="IX7-XS-afg" kind="show" id="kHc-2T-Abk"/>
+                                                    <action selector="onWithoutLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBl-te-HAg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -94,6 +94,7 @@
                     <navigationItem key="navigationItem" id="tZI-dI-rZ3"/>
                     <connections>
                         <outlet property="titleLabel" destination="8qw-UC-N8x" id="LKN-JE-Tu2"/>
+                        <segue destination="IX7-XS-afg" kind="show" identifier="NoLoginSegue" id="CxB-Lh-gLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -450,7 +451,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aug-Oy-Hyw"/>
+        <segue reference="CxB-Lh-gLa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PiggyBankIcon" width="1200" height="1200"/>
