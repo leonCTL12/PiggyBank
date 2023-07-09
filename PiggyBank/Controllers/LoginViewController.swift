@@ -29,10 +29,21 @@ override func viewDidLoad() {
             if let e = error {
                 print(e.localizedDescription)
             } else {
-                self.performSegue(withIdentifier: K.SwiftID.collectionViewSegueID, sender: self)
+                goToCollectionView()
             }
             
         })
+    }
+    
+    func goToCollectionView() {
+        let repository = FirestoreDataRepository()
+        guard let vc = storyboard?.instantiateViewController(identifier: K.SwiftID.collectionViewStoryboardID, creator: { coder in
+            return PiggyBankCollectionViewController(coder: coder, using: repository)
+        }) else {
+            fatalError("Failed to load collection view")
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 }

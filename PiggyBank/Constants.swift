@@ -12,8 +12,14 @@ struct K {
         static let collectionViewStoryboardID = "PiggyBankCollectionViewController"
         static let piggyCellID = "PiggyCell"
         static let detailViewStoryboardID = "PiggyDetailViewController"
-        static let collectionViewSegueID = "goToPiggyBankCollection"
     }
     
+    struct Firestore {
+        static let collectionName = "PiggyBanks"
+        static let currentAmountFieldName = "CurrentAmount"
+        static let bankNameFieldName = "Name"
+        static let targetAmountFieldName = "TargetAmount"
+        static let ownerFieldName = "User"
+    }
     
 }
