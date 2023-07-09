@@ -75,8 +75,19 @@ class FirestoreDataRepository: DataRepositoryProtocol {
         }
     }
     
+    //POTENTIAL PROBLEM: race condition between deleting DB and fetching DB again in collection view's viewWillAppear
     func deletePiggyBank(_ bank: PiggyBank) {
-        
+        getBankDocID(withBank: bank) { (docID) in
+            self.db.collection(K.Firestore.collectionName).document(docID).delete {
+                error in
+                if let error = error {
+                    print("Error removing document: \(error)")
+                } else {
+                    print("Document with ID \(docID) successfully removed")
+                }
+            }
+            
+        }
     }
     
     //Assume Name in the piggy bank is unqiue
