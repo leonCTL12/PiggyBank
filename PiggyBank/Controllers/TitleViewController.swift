@@ -18,7 +18,7 @@ class TitleViewController: UIViewController {
     
     func goToCollectionView() {
         let repository = RealmDataRepository()
-        guard let vc = storyboard?.instantiateViewController(identifier: "PiggyBankCollectionViewController", creator: { coder in
+        guard let vc = storyboard?.instantiateViewController(identifier: K.collectionViewStoryboardID, creator: { coder in
             return PiggyBankCollectionViewController(coder: coder, using: repository)
         }) else {
             fatalError("Failed to load collection view")

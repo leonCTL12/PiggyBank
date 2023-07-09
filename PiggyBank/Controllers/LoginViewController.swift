@@ -29,7 +29,7 @@ override func viewDidLoad() {
             if let e = error {
                 print(e.localizedDescription)
             } else {
-                self.performSegue(withIdentifier: "goToPiggyBankCollection", sender: self)
+                self.performSegue(withIdentifier: K.SwiftID.collectionViewSegueID, sender: self)
             }
             
         })

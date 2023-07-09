@@ -21,6 +21,7 @@
 		7345FFBA2A4AD138004B7882 /* PiggyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFB92A4AD138004B7882 /* PiggyBankTests.swift */; };
 		7345FFC42A4AD138004B7882 /* PiggyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */; };
 		7345FFC62A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */; };
+		73A405512A5A3EE0004298E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A405502A5A3EE0004298E9 /* Constants.swift */; };
 		73A7CC392A4BEB7C001C4361 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */; };
 		73A7CC3B2A4C011D001C4361 /* PiggyBankCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */; };
 		73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */; };
@@ -69,6 +70,7 @@
 		7345FFBF2A4AD138004B7882 /* PiggyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiggyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345FFC32A4AD138004B7882 /* PiggyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITests.swift; sourceTree = "<group>"; };
 		7345FFC52A4AD138004B7882 /* PiggyBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73A405502A5A3EE0004298E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		73A7CC382A4BEB7C001C4361 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
 		73A7CC3A2A4C011D001C4361 /* PiggyBankCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankCollectionViewController.swift; sourceTree = "<group>"; };
 		73A7CC3C2A4C0FFB001C4361 /* PiggyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyDetailViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				7345FFA42A4AD137004B7882 /* SceneDelegate.swift */,
 				7345FFAB2A4AD138004B7882 /* Assets.xcassets */,
 				7345FFB02A4AD138004B7882 /* Info.plist */,
+				73A405502A5A3EE0004298E9 /* Constants.swift */,
 			);
 			path = PiggyBank;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				73F2E9122A4D6C0A003B0A03 /* DataRepostioryProtocol.swift in Sources */,
 				7345FFA52A4AD137004B7882 /* SceneDelegate.swift in Sources */,
 				73A7CC3D2A4C0FFB001C4361 /* PiggyDetailViewController.swift in Sources */,
+				73A405512A5A3EE0004298E9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

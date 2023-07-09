@@ -42,7 +42,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PiggyCell", for: indexPath)
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.SwiftID.piggyCellID, for: indexPath)
         if let piggyCell = cell as? PiggyCell
         {
             let bank = piggyBanks[indexPath.row]
@@ -100,7 +100,7 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     }
     
     func goToDetailView(of piggyBank: PiggyBank) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "PiggyDetailViewController", creator: {
+        guard let vc = storyboard?.instantiateViewController(identifier: K.SwiftID.detailViewStoryboardID, creator: {
             coder in
             return PiggyDetailViewController(coder: coder, repository: self.repository, bank: piggyBank)
         }) else {
