@@ -9,7 +9,7 @@ import Foundation
 
 protocol DataRepositoryProtocol {
     func savePiggyBank(_ bank: PiggyBank)
-    func getPiggyBanks() -> [PiggyBank]
+    func getPiggyBanks(completion: @escaping([PiggyBank]) -> Void)
     //I agree this signature is werid, yet update implementation of Realm force me to do so
     func increasePiggyBankAmount(_ bank: PiggyBank, _ amount: Float)
     func deletePiggyBank(_ bank: PiggyBank)

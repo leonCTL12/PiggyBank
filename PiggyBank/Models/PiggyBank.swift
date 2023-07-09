@@ -13,7 +13,7 @@ class PiggyBank: Object {
     
     @objc dynamic var target: Float = 0.0
     
-    @objc dynamic var amount: Float = 0
+    @objc dynamic var amount: Float = 0.0
 
     
     public func changeTarget(to amount: Float) {
@@ -24,8 +24,9 @@ class PiggyBank: Object {
         self.amount += amount
     }
     
-    public func initialise(withName name: String, withTarget target: Float) {
+    public func initialise(withName name: String, withTarget target: Float, withAmount amount: Float = 0.0) {
         self.name = name
         self.target = target
+        self.amount = amount
     }
 }

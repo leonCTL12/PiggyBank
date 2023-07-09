@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class RealmDataRepository: DataRepositoryProtocol {
-    
+
     let realm = try! Realm()
     
     func savePiggyBank(_ bank: PiggyBank) {
@@ -21,10 +21,10 @@ class RealmDataRepository: DataRepositoryProtocol {
             print("Error saving context: \(error)")
         }
     }
-    
-    func getPiggyBanks() -> [PiggyBank] {
+
+    func getPiggyBanks(completion: @escaping ([PiggyBank]) -> Void) {
         let piggyBanks = realm.objects(PiggyBank.self)
-        return Array(piggyBanks)
+        completion(Array(piggyBanks))
     }
     
     func increasePiggyBankAmount(_ bank: PiggyBank, _ amount: Float) {

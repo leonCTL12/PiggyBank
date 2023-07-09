@@ -113,8 +113,10 @@ class PiggyBankCollectionViewController: UICollectionViewController {
     
     //MARK: - General
     private func refreshData() {
-        self.piggyBanks = self.repository.getPiggyBanks()
-        self.collectionView.reloadData()
+        self.repository.getPiggyBanks() { (banks) in
+            self.piggyBanks = banks
+            self.collectionView.reloadData()
+        }
     }
 
 

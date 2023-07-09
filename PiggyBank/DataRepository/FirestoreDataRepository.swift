@@ -30,8 +30,33 @@ class FirestoreDataRepository: DataRepositoryProtocol {
         }
     }
     
-    func getPiggyBanks() -> [PiggyBank] {
-            return []
+    func getPiggyBanks(completion: @escaping ([PiggyBank]) -> Void) {
+        var banks:[PiggyBank] = []
+        
+        if let owner = Auth.auth().currentUser?.email {
+            let query = db.collection(K.Firestore.collectionName).whereField(K.Firestore.ownerFieldName, isEqualTo: owner)
+            query.getDocuments{ (querySnapshot, error) in
+                    
+                    if let e = error {
+                        print("There was an issue retrieving data from firestore. \(e)")
+                    } else {
+                        if let snapshotDocuments = querySnapshot?.documents {
+                            for doc in snapshotDocuments {
+                                let data = doc.data()
+                                if let name = data[K.Firestore.bankNameFieldName] as? String, let targetAmount = data[K.Firestore.targetAmountFieldName] as? Float, let currentAmount = data[K.Firestore.currentAmountFieldName] as? Float
+                                {
+                                    let bank = PiggyBank()
+                                    bank.initialise(withName: name, withTarget: targetAmount, withAmount: currentAmount)
+                                    banks.append(bank)
+                                }
+                            }
+                            
+                            completion(banks)
+                        }
+                    }
+                    
+                }
+        }
     }
     
     func increasePiggyBankAmount(_ bank: PiggyBank, _ amount: Float) {
